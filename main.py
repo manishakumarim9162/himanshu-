@@ -97,15 +97,18 @@ AUTORUN_SERIAL_LOCK = asyncio.Lock()
 # 🔥 FULLY OPERATIONAL GLOBAL CONVERSATION STATES (AUTOMATIC NO-OVERLAP SEQUENCE)
 # ====================================================================
 # Auto quiz flow: TOPIC -> Q_COUNT -> BOOK_NAME -> TITLE -> ...
+# पहला set (AUTOQUIZ के लिए)
 (TOPIC, Q_COUNT, BOOK_NAME, TITLE, DESCRIPTION, LANGUAGE,
  EXPLANATION, DIFFICULTY, OPTIONS_COUNT, TIME_LIMIT, NEGATIVE) = range(11)
 
-# Main quiz edit panel menu flows
-EDIT_TITLE, EDIT_DESC, EDIT_TIMER, EDIT_NEGATIVE = range(11, 15)
+# दूसरा set (NEWQUIZ के लिए) - यह ADD करें
+QUESTIONS, PRE_MESSAGE, TIMER = range(11, 14)
 
-# Question inner attributes edit panels
-EDIT_QUESTION_TEXT, EDIT_QUESTION_OPTIONS, EDIT_QUESTION_CORRECT, EDIT_QUESTION_EXPLANATION, EDIT_QUESTION_PRE_MESSAGE = range(15, 20)
-# ====================================================================
+# तीसरा set (EDIT के लिए)
+EDIT_TITLE, EDIT_DESC, EDIT_TIMER, EDIT_NEGATIVE = range(14, 18)
+
+# चौथा set
+EDIT_QUESTION_TEXT, EDIT_QUESTION_OPTIONS, EDIT_QUESTION_CORRECT, EDIT_QUESTION_EXPLANATION, EDIT_QUESTION_PRE_MESSAGE = range(18, 23)
 
 def escape_markdown(text):
     """Escape special characters for Telegram Markdown"""
